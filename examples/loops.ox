@@ -1,0 +1,20 @@
+fn is_prime(n: i64) -> bool {
+  if n < 2 { return false; }
+  let mut i = 2;
+  while i * i <= n {
+    if n % i == 0 { return false; }
+    i = i + 1;
+  }
+  return true;
+}
+
+fn main() -> i64 {
+  let mut count = 0;
+  for let mut k = 2; k < 50; k = k + 1 {
+    if is_prime(k) {
+      count = count + 1;
+    }
+  }
+  print("primes under 50:", count);
+  return 0;
+}
